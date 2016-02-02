@@ -16,8 +16,8 @@ var Board = (function() {
 
   function pickNum(squareNum) {
     if (picked.indexOf(squareNum) === -1) {
-      picked.push(squareNum);
-      console.log('Added ' + squareNum + ' to picked');
+      picked[squareNum] = squareNum;
+      console.log('Added ' + picked[squareNum] + ' to picked');
     }
   }
 
