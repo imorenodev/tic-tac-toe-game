@@ -25,5 +25,3 @@ var Board = (function() {
     init: init
   };
 })();
-
-$(document).ready(Board.init());
