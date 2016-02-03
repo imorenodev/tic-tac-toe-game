@@ -1,6 +1,5 @@
 var Board = (function() {
-  var $squares,
-      picked;
+  var $squares, picked;
 
   var init = function() {
     $squares = $(".square");
