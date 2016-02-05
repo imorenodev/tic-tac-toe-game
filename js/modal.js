@@ -19,7 +19,7 @@ var Modal = (function() {
   	}
   	/* stop event bubbling past parent div / modal element the 
   	   event listener is watching */
-    e.stopPropagation;
+    e.stopPropagation();
   }
   function close() {
   	// change modal element class name back to "modal", opacity "0"
