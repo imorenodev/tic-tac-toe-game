@@ -6,6 +6,7 @@ var Modal = (function() {
   }
 
 	return {
-		init: open
+		init: open,
+		close: close
 	};
 })();
