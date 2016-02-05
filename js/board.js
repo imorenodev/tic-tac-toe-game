@@ -1,11 +1,20 @@
 var Board = (function() {
-  var squares;
+  var board = document.querySelector(".board");
+  var square;
+  var marker;
 
-  var init = function() {
-    //some code
-  };
+
+  function init() {
+
+  }
+
+  function setMarker(chosenMarker) {
+    marker = chosenMarker;
+    console.log(marker);
+  }
 
   return {
-    init: init
+    init: init,
+    setMarker: setMarker
   };
 })();

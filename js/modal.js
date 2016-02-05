@@ -15,7 +15,8 @@ var Modal = (function() {
 	  /* only fire event if child elements (the markers) are clicked,
   	   exluding the <p> element */
   	if (e.target !== e.currentTarget && e.target.tagName !== "P") {
-  		close();
+  		Board.setMarker("X");
+      close();
   	}
   	/* stop event bubbling past parent div / modal element the 
   	   event listener is watching */
