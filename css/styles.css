@@ -18,11 +18,11 @@ h1 {
   padding: 24px 20px;
   opacity: 0;
 
-  -webkit-transition: 1000ms opacity ease;
-     -moz-transition: 1000ms opacity ease;
-      -ms-transition: 1000ms opacity ease;
-       -o-transition: 1000ms opacity ease;
-          transition: 1000ms opacity ease;
+  -webkit-transition: 500ms opacity ease;
+     -moz-transition: 500ms opacity ease;
+      -ms-transition: 500ms opacity ease;
+       -o-transition: 500ms opacity ease;
+          transition: 500ms opacity ease;
 
   -webkit-transform: translate(-50%, -50%);
      -moz-transform: translate(-50%, -50%);
@@ -62,6 +62,11 @@ h1 {
 .modal div span {
   line-height: 150px;
   font-size: 5em;
+}
+
+.modal button {
+  display: block;
+  margin: 15px auto;
 }
 
 /*** Game Board ***/
