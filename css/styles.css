@@ -7,6 +7,64 @@ h1 {
   font-size: 3em;
 }
 
+/*** Modal ***/
+.modal {
+  position: absolute;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  height: 300px;
+  width: 500px;
+  padding: 24px 20px;
+  opacity: 0;
+
+  -webkit-transition: 1000ms opacity ease;
+     -moz-transition: 1000ms opacity ease;
+      -ms-transition: 1000ms opacity ease;
+       -o-transition: 1000ms opacity ease;
+          transition: 1000ms opacity ease;
+
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+
+  border-radius: 2px;
+  border: 2px solid #808080;
+  background: #fff;
+}
+
+.modal.open {
+  opacity: 1;
+}
+
+.modal p {
+  color: #000;
+  font-size: 2em;
+}
+
+.modal div {
+  height: 150px;
+  width: 150px;
+  background-color: none;
+  display: inline-block;
+  border: 1px solid #808080;
+  margin: 25px 25px 0px 25px;
+  cursor: pointer;
+}
+
+.modal div:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.modal div span {
+  line-height: 150px;
+  font-size: 5em;
+}
+
+/*** Game Board ***/
 .wrapper {
   padding-top: 0px;
 }
