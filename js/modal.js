@@ -1,8 +1,10 @@
 var Modal = (function() {
-  var $modal = $(".modal");
+  var modal = document.querySelector(".modal");
 
   function open() {
-  	alert("Modal Open");
+
+    modal.className = modal.className + " open";
+    console.log(modal.className);
   }
 
 	return {
