@@ -22,8 +22,9 @@ var Modal = (function() {
     e.stopPropagation();
   }
   function close() {
-  	// change modal element class name back to "modal", opacity "0"
-  	modal.className = "modal";
+  	/* call on the parentNode (document.body) of modal 
+       element to removeChild modal from the parentNode */
+    modal.parentNode.removeChild(modal);
   }
 
 	return {
