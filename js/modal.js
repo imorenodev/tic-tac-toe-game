@@ -18,9 +18,9 @@ var Modal = (function() {
   		var eTargetChild = e.target.firstChild;
       /* get the text content of the parent marker div or span
          DOM node that was clicked and pass to Board module */
-      if (eTargetChild.firstChild ? 
-         Board.setMarker(eTargetChild.firstChild.data) : 
-         Board.setMarker(eTargetChild.data));
+      Board.setMarkers(eTargetChild.firstChild ? 
+         eTargetChild.firstChild.data : 
+         eTargetChild.data);
       // close modal window
       close();
   	}

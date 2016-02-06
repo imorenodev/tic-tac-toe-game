@@ -1,17 +1,20 @@
 var Board = (function() {
   var board = document.querySelector(".board"),
       chosenSquares = [],
-      marker;
+      playerMarker;
 
 
   function init() {
-    console.log("Player chose " + marker + " as their marker.");
     board.addEventListener("click", selectSquare, false);
   }
 
-  function setMarker(chosenMarker) {
-    marker = chosenMarker;
+  function setMarkers(chosenMarker) {
+    playerMarker = chosenMarker;
+    compMarker = playerMarker === "X" ? "O" : "X";
 
+    console.log("The Player chose " + playerMarker + " as their marker.");
+    console.log("The Computer's marker is " + compMarker + ".");
+    
     init();
   }
 
@@ -20,10 +23,12 @@ var Board = (function() {
        the div's classList and push onto chosenSquares array */
     chosenSquares.push(e.target.classList[1]);
     console.log("Player chose square #" + e.target.classList[1] + ".");
-    e.target.innerHTML = marker;
+
+    // add player's marker to chosen square  
+    e.target.innerHTML = playerMarker;
   }
 
   return {
-    setMarker: setMarker
+    setMarkers: setMarkers
   };
 })();
