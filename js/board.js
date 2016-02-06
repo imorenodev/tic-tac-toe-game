@@ -1,6 +1,6 @@
 var Board = (function() {
   var board = document.querySelector(".board"),
-      chosenSquare,
+      chosenSquares = [],
       marker;
 
 
@@ -16,9 +16,11 @@ var Board = (function() {
   }
 
   function selectSquare(e) {
-    /* get number of selected square from the second element 
-       of the div's classList */
+    /* get number of selected square from the second element of
+       the div's classList and push onto chosenSquares array */
+    chosenSquares.push(e.target.classList[1]);
     console.log("Player chose square #" + e.target.classList[1] + ".");
+    e.target.innerHTML = marker;
   }
 
   return {
