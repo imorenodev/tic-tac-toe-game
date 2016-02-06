@@ -26,6 +26,8 @@ var Board = (function() {
 
     // add player's marker to chosen square  
     e.target.innerHTML = playerMarker;
+
+    Logic.compMove(chosenSquares);
   }
 
   return {
